@@ -1,0 +1,22 @@
+html {
+	background-color: #F5E2C8;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+}
+
+.button {	
+	color: #BD1E1E3;
+	background-color: #D88373;
+	width: 12rem;
+	height: 5rem;
+	font-size: 2.5rem;
+	border: none;
+	border-radius: .5rem;
+	margin: 1rem;
+	cursor: pointer;
+}
+
+
