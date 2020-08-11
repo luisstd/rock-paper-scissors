@@ -1,15 +1,32 @@
 html {
-	background-color: #F5E2C8;
+	background-color: #2C0735;
+	width: 100vw;
+	height: 100vh;
 }
 
-body {
+header {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+h1 {
+	margin: 1rem;
+	font-size: 4rem;
+	font-family: sans-serif;
+	justify-self: center;
+	align-self: center;
+	color: #FCECC9;
+}
+
+.container__button {
 	display: flex;
 	justify-content: center;
 }
 
 .button {	
-	color: #BD1E1E3;
-	background-color: #D88373;
+	color: #FCECC9;
+	background-color: #4E148C;
 	width: 12rem;
 	height: 5rem;
 	font-size: 2.5rem;
@@ -17,6 +34,7 @@ body {
 	border-radius: .5rem;
 	margin: 1rem;
 	cursor: pointer;
+	margin-top: 15vh;
 }
 
 

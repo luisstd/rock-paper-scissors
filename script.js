@@ -4,33 +4,52 @@ const buttonPaper = document.getElementById("paper");
 const buttonScissors = document.getElementById("scissors");
 
 // button helper function
+let buttonOutput = '';
+
 function getButtonRock() {
-	return 'rock';
+	console.log('rock');
+	buttonOutput = 'rock';
+	playerSelection = 'rock';
 }
 
 function getButtonPaper() {
-	return 'paper';
+	console.log('paper');
+	buttonOutput = 'paper';
+	playerSelection = 'paper';
+
 }		
 
 function getButtonScissors() {
-	return 'scissors';
+	console.log('scissors');
+	buttonOutput = 'scissors';
+	playerSelection = 'scissors';
+
 }
 
 // plays turn for each opponent
-function playerPlay() {	
-	buttonRock.addEventListener('click', getButtonRock);
-	buttonPaper.addEventListener('click', getButtonPaper);
-	buttonScissors.addEventListener('click', getButtonScissors);
+function playerPlay() {		
+buttonRock.addEventListener('click', getButtonRock);
+buttonPaper.addEventListener('click', getButtonPaper);
+buttonScissors.addEventListener('click', getButtonScissors);	
+
+	if (buttonOutput === 'rock') {
+		return 'rock';
+	} else if (buttonOutput === 'paper') {
+		return 'paper' 
+	} else if (buttonOutput === 'scissors') {
+		return 'scissors'
+	}
 }
+playerPlay();
 
 function computerPlay() {
 	let options = ['rock', 'paper', 'scissors'];
 	return options[Math.floor(Math.random() * Math.floor(3))];
 }
 
+
 // selections for each opponent
-let playerSelection = playerPlay();
-let computerSelection = computerPlay(); 
+const computerSelection = computerPlay(); 
 
 
 function playRound(playerSelection, computerSelection) {
@@ -66,6 +85,3 @@ function playRound(playerSelection, computerSelection) {
 	}
 }
 
-function game() {
-	console.log(playRound(playerSelection, computerSelection));
-}
